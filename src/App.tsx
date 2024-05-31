@@ -2,21 +2,26 @@ import {NavLink, Outlet} from 'react-router-dom';
 
 import './App.css'
 // Profile Picture
-import profile from './assets/IMG_4704.jpg';
+import profile from './assets/IMG_4704.jpg'
+
+// Social Media Icons
+import facebook from './assets/facebook.png'
+import instagram from './assets/instagram.png'
+import github from './assets/github.png'
 
 function App() {
 
-  const windowWidth:number = window.innerWidth;
-  const mainElement = document.querySelector('main');
-  if (mainElement) {
-    mainElement.style.width = `${windowWidth - 500}px`;
+  const deviceWidth:number = window.innerWidth;
+
+  const mainstyle = {
+    width: deviceWidth - 450
   }
 
   const NestedPages: string[] = [
     '', // Default Page
     'Projects',
     'Background',
-    'Contact'
+    'Hire Me'
   ]
 
   return (
@@ -27,19 +32,42 @@ function App() {
       </div>
       <h1 className='name'>Jhon Ericsson D. Ytac</h1>
       <h2 className='title'>Front-end Developer</h2>
-      <nav>
+      <ul className='socMeds'>
+        <li><a href="https://www.facebook.com/jhonericssonytac123/"><img src={facebook} alt="Facebook" className='socIcon'/> Jhon Ericsson</a></li>
+        <li><a href="https://www.instagram.com/jedy_onbox/"><img src={instagram} alt="Instagram" className='socIcon'/> jedy_onbox</a></li>
+        <li><a href="https://github.com/Jedybox"><img src={github} alt="github" className='socIcon'/>Jedybox</a></li>
+        <li>jhonericssonytac365@gmail.com</li>
+        <li>(+63) 948 427 4626</li>
+      </ul>
+      <footer></footer>
+    </aside>
+    <main style={mainstyle}>
+    <nav>
         <ul className='navlist'>
           {NestedPages.map((page, index) => {
-            if (page === '') return (
-              <li>
-                <NavLink key={index} to='/'
-                className={({isActive}) => {
-                  return isActive ? 'active' : ''
-                }}>
-                  Home
-                </NavLink>
-              </li>
-            )
+            if (page === '') {
+              return (
+                <li>
+                  <NavLink key={index} to='/'
+                  className={({isActive}) => {
+                    return isActive ? 'active' : ''
+                  }}>
+                    Home
+                  </NavLink>
+                </li>
+              )
+            } else if (page === 'Hire Me') {
+              return (
+                <li>
+                  <NavLink key={index} to='/hire-me'
+                  className={({isActive}) => {
+                    return isActive ? 'active' : ''
+                  }}>
+                    {page}
+                  </NavLink>
+                </li>
+              )
+            }
 
             return (
               <li>
@@ -54,9 +82,6 @@ function App() {
           })}
         </ul>
       </nav>
-      <footer></footer>
-    </aside>
-    <main>
       <Outlet />
     </main>
     </>

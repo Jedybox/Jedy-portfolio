@@ -1,0 +1,109 @@
+aside {
+    position: fixed;
+    background-color: #1B1B1B;
+    width: 450px;
+    height: 100%;
+    color: whitesmoke;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pfp-con {
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  position: relative;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pfp {
+  position: absolute;
+  top: -15px;
+  width: 100%;
+}
+
+.name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 30px;
+
+  margin: 0;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 20px;
+
+  margin: 0;
+}
+
+.socMeds {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.socMeds li {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.socMeds li a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Navigation */
+main {
+    margin-left: 450px;
+    right: 0px;
+}
+
+nav {
+    position: relative;
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-items: right;
+}
+
+nav .navlist{
+    width: max-content;
+    height: fit-content;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}

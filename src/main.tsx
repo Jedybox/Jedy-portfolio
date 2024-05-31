@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <Background />
       },
       {
-        path: '/contact',
+        path: '/hire-me',
         element: <Contact />
       }
     ]
