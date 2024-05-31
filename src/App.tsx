@@ -14,7 +14,7 @@ function App() {
   const deviceWidth:number = window.innerWidth;
 
   const mainstyle = {
-    width: deviceWidth - 450
+    width: deviceWidth - 400
   }
 
   const NestedPages: string[] = [
@@ -31,7 +31,7 @@ function App() {
         <img src={profile} alt='profile' className='pfp'/>
       </div>
       <h1 className='name'>Jhon Ericsson D. Ytac</h1>
-      <h2 className='title'>software Developer</h2>
+      <h2 className='title'>Software Developer</h2>
       <ul className='socMeds'>
         <li><a href="https://www.facebook.com/jhonericssonytac123/"><img src={facebook} alt="Facebook" className='socIcon'/> Jhon Ericsson</a></li>
         <li><a href="https://www.instagram.com/jedy_onbox/"><img src={instagram} alt="Instagram" className='socIcon'/> jedy_onbox</a></li>
