@@ -1,5 +1,5 @@
 
-export default function Contact() {
+export default function Hire_Me() {
   return (
     <div>
         <h1>react</h1>

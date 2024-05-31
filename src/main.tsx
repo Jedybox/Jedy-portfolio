@@ -4,7 +4,7 @@ import App from './App.tsx'
 import Home from './pages/Home.tsx'
 import Projects from './pages/Projects.tsx'
 import Background from './pages/Background.tsx'
-import Contact from './pages/Contact.tsx'
+import Hire_me from './pages/Hire.tsx'
 import {
   createBrowserRouter,
   RouterProvider
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/hire-me',
-        element: <Contact />
+        element: <Hire_me />
       }
     ]
   },
