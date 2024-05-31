@@ -40,6 +40,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .SkillGroupHeader {
@@ -47,6 +50,24 @@
     font-size: 25px;
     font-weight: 400;
     font-style: bold;
+
+    margin: 0;
+}
+
+.skillList {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    list-style: none;
+}
+
+.skillItem {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    font-style: italic;
 
     margin: 0;
 }

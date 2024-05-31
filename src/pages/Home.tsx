@@ -13,44 +13,44 @@ export default function Home() {
 
       <div className={style.skills}>
         <h2  className={style.skillHeader}>Skills</h2>
-        <p className={style.skillSub}>Skills, Library, and Others I learned, developed, and excelled throught my 4 years of experience as a developer</p>
+        <p className={style.skillSub}>Skills, Library, and Others I learned, developed, and excelled throught my 4 years of experience as a developer.</p>
         <div className={style.skillSet}>
           <div className={style.skillGroup}>
           <h3 className={style.SkillGroupHeader}>Programming langues</h3>
-            <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>C#</li>
-              <li>Java</li>
-              <li>SQL</li>
+            <ul className={style.skillList}>
+              <li className={style.skillItem}>Python</li>
+              <li className={style.skillItem}>JavaScript</li>
+              <li className={style.skillItem}>TypeScript</li>
+              <li className={style.skillItem}>C#</li>
+              <li className={style.skillItem}>Java</li>
+              <li className={style.skillItem}>SQL</li>
             </ul>
           </div>
           <div  className={style.skillGroup}>
             <h3 className={style.SkillGroupHeader}>Frontend</h3>
-            <ul>
-              <li>React</li>
-              <li>Andriod Studio</li>
-              <li>PyQt</li>
-              <li>.Net MAUI</li>
-              <li>HTML</li>
-              <li>CSS</li>
+            <ul className={style.skillList}>
+              <li className={style.skillItem}>React</li>
+              <li className={style.skillItem}>Andriod Studio</li>
+              <li className={style.skillItem}>PyQt</li>
+              <li className={style.skillItem}>.Net MAUI</li>
+              <li className={style.skillItem}>HTML</li>
+              <li className={style.skillItem}>CSS</li>
             </ul>
           </div>
           <div  className={style.skillGroup}>
             <h3 className={style.SkillGroupHeader}>Backend</h3>
-            <ul>
-              <li>Node.js</li>
-              <li>MySQL</li>
-              <li>Firebase</li>
+            <ul className={style.skillList} >
+              <li className={style.skillItem}>Node.js</li>
+              <li className={style.skillItem}>MySQL</li>
+              <li className={style.skillItem}>Firebase</li>
             </ul>
           </div>
           <div className={style.skillGroup}>
             <h3 className={style.SkillGroupHeader}>Others</h3>
-            <ul>
-              <li>Git</li>
-              <li>Pandas</li>
-              <li>Matplotlib</li>
+            <ul className={style.skillList}>
+              <li className={style.skillItem}>Git</li>
+              <li className={style.skillItem}>Pandas</li>
+              <li className={style.skillItem}>Matplotlib</li>
             </ul>
           </div>
         </div>
