@@ -17,12 +17,12 @@ aside {
 }
 
 .pfp-con {
-  margin-top: 100px;
+  margin-top: 75px;
   margin-bottom: 20px;
 
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 22 5px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -38,6 +38,8 @@ aside {
   font-weight: 400;
   font-style: bold;
   font-size: 40px;
+
+  margin: 0;
 }
 
 nav {
@@ -60,7 +62,10 @@ nav {
 }
 
 .navlist li {
-  margin: 50px 0;
   width: 300px;
 }
 
+main {
+  position: absolute;
+  right: 0px;
+}
