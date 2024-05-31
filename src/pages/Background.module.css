@@ -1,0 +1,19 @@
+.head {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: bold;
+}
+
+.EducBg {
+    width: 100%;
+    margin-bottom: 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
