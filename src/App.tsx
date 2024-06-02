@@ -1,89 +1,42 @@
-import {NavLink, Outlet} from 'react-router-dom';
-
 import './App.css'
-// Profile Picture
-import profile from './assets/IMG_4704.jpg'
-
-// Social Media Icons
-import facebook from './assets/facebook.png'
-import instagram from './assets/instagram.png'
-import github from './assets/github.png'
 
 function App() {
 
-  const deviceWidth:number = window.innerWidth;
+  const deviceHeight = window.innerHeight
 
-  const mainstyle = {
-    width: deviceWidth - 400
+  const body = document.querySelector('body');
+  if (body) {
+    body.style.height = `${deviceHeight}px`;
   }
-
-  const NestedPages: string[] = [
-    '', // Default Page
-    'Projects',
-    'Background',
-    'Hire Me'
-  ]
+  
+  const reverseFlickerAnimation = ():void => {
+    const splash = document.querySelector('.HI');
+    if (splash) {
+      splash.classList.add('reverseFlicker');
+    }
+  }
 
   return (
     <>
-    <aside>
-      <div className='pfp-con'>
-        <img src={profile} alt='profile' className='pfp'/>
-      </div>
-      <h1 className='name'>Jhon Ericsson D. Ytac</h1>
-      <h2 className='title'>Software Developer</h2>
-      <ul className='socMeds'>
-        <li><a href="https://www.facebook.com/jhonericssonytac123/"><img src={facebook} alt="Facebook" className='socIcon'/> Jhon Ericsson</a></li>
-        <li><a href="https://www.instagram.com/jedy_onbox/"><img src={instagram} alt="Instagram" className='socIcon'/> jedy_onbox</a></li>
-        <li><a href="https://github.com/Jedybox"><img src={github} alt="github" className='socIcon'/>Jedybox</a></li>
-        <li>jhonericssonytac365@gmail.com</li>
-        <li>(+63) 948 427 4626</li>
-      </ul>
-      <footer></footer>
-    </aside>
-    <main style={mainstyle}>
-    <nav>
-        <ul className='navlist'>
-          {NestedPages.map((page, index) => {
-            if (page === '') {
-              return (
-                <li>
-                  <NavLink key={index} to='/'
-                  className={({isActive}) => {
-                    return isActive ? 'active' : ''
-                  }}>
-                    Home
-                  </NavLink>
-                </li>
-              )
-            } else if (page === 'Hire Me') {
-              return (
-                <li>
-                  <NavLink key={index} to='/hire-me'
-                  className={({isActive}) => {
-                    return isActive ? 'active' : ''
-                  }}>
-                    {page}
-                  </NavLink>
-                </li>
-              )
-            }
+      <div className='splash'>
 
-            return (
-              <li>
-                <NavLink key={index} to={`/${page.toLowerCase()}`}
-                className={({isActive}) => {
-                  return isActive ? 'active' : ''
-                }}>
-                  {page}
-                </NavLink>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
-      <Outlet />
-    </main>
+        <h1 className="Hi">HI!</h1>
+
+        <div className="splashBox">
+
+          <h3 className='splashHeader'>Welcome to by personal website.</h3>
+          <p className='splashMessage'>
+            I have created this Portfolio website to feel like a game/sci-fi interface. All text inside tries to reflect this.
+          </p>
+          <p className='splashMessage'>
+            You will find ‘achievements’ or ‘quests’ that show the progress in my professional life and are related to what I am working on.
+          </p>
+
+          <button className='EnterBtn' onClick={reverseFlickerAnimation}>enter the system</button>
+
+        </div>
+
+      </div>
     </>
   )
 }

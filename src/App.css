@@ -1,123 +1,87 @@
-aside {
-    position: fixed;
-    background-color: #1B1B1B;
-    width: 400px;
-    height: 100%;
-    color: whitesmoke;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+.splash {
+    width: fit-content;
+    height: fit-content;
 
-.pfp-con {
-  margin-top: 25px;
-  margin-bottom: 20px;
-
-  position: relative;
-  width: 225px;
-  height: 225px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.pfp {
-  position: absolute;
-  top: -15px;
-  width: 100%;
-}
-
-.name {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: bold;
-  font-size: 30px;
-
-  margin: 0;
-}
-
-.title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  font-style: italic;
-  font-size: 20px;
-
-  margin: 0;
-}
-
-.socMeds {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.socMeds li {
-    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 20px;
+    text-transform: uppercase;
+    gap: 30px;
 }
 
-.socMeds li a {
-    color: whitesmoke;
-    text-decoration: none;
+.Hi {
+    opacity: 0;
+    width: 408px;
+    position: relative;
+    font-size: 538px;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Big Shoulders Display';
+    color: #e84a4a;
+    text-align: left;
+    display: inline-block;
+
     margin: 0;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    animation: flickerAnimation 1.5s ;
+    animation-duration: 1s;
 }
 
-.socIcon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-/* Navigation */
-main {
-    margin-left: 400px;
-    right: 0px;
-    background-color:  #EDEAE0;
-    display: flex;
-}
-
-nav {
-    position: fixed;
-    width: 95%;
+.splashBox {
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-items: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color:  #b8b4a8;
+    width: 650px;
+    color: #fff;
 }
 
-nav .navlist{
-    width: max-content;
-    height: fit-content;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: italic;
+.splashHeader {
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: Iceland;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
 }
 
-.NestedPage {
-    margin-top: 75px;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
+.splashMessage {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    line-height: 130%;
+    text-transform: uppercase;
+    font-family: Iceland;
+}
+
+.EnterBtn {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Big Shoulders Display';
+    color: #e84a4a;
+    text-align: left;
+
+    background-color: #000003;
+    border: 2px solid #e84a4a;
+    padding: 15px 50px;
+}
+
+.EnterBtn:hover {
+    background-color: #e84a4a;
+    color: #000003;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
