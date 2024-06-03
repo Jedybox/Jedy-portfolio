@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './App.css'
 
 function App() {
@@ -9,15 +10,19 @@ function App() {
     body.style.height = `${deviceHeight}px`;
   }
   
-  const reverseFlickerAnimation = ():void => {
-    const splash = document.querySelector('.HI');
-    if (splash) {
-      splash.classList.add('reverseFlicker');
-    }
-  }
 
   return (
     <>
+      <svg width="580" height="309" viewBox="0 0 580 309" fill="none" xmlns="http://www.w3.org/2000/svg" className='cornerEffect'>
+        <rect width="583" height="309" fill="url(#paint0_linear_54_3)"/>
+        <defs>
+        <linearGradient id="paint0_linear_54_3" x1="583" y1="3.49009e-05" x2="427.731" y2="155.364" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#E84A4A" stop-opacity="0.33"/>
+        <stop offset="1" stop-color="#E84A4A" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      </svg>
+
       <div className='splash'>
 
         <h1 className="Hi">HI!</h1>
@@ -32,7 +37,7 @@ function App() {
             You will find ‘achievements’ or ‘quests’ that show the progress in my professional life and are related to what I am working on.
           </p>
 
-          <button className='EnterBtn' onClick={reverseFlickerAnimation}>enter the system</button>
+          <Link to={'/home'}><button className='EnterBtn'>enter the system</button></Link>
 
         </div>
 

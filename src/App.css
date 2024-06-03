@@ -11,7 +11,7 @@
 }
 
 .Hi {
-    opacity: 0;
+    opacity: 1;
     width: 408px;
     position: relative;
     font-size: 538px;
@@ -24,8 +24,7 @@
     display: inline-block;
 
     margin: 0;
-    animation: flickerAnimation 1.5s ;
-    animation-duration: 1s;
+    animation: flickerAnimation .5s ease-in;
 }
 
 .splashBox {
@@ -71,17 +70,24 @@
     color: #000003;
 }
 
+.cornerEffect {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -100;
+}
+
 @keyframes flickerAnimation {
     0% {
-        opacity: 0;
+        opacity: 1;
     }
     25% {
-        opacity: 1;
-    }
-    50% {
         opacity: 0;
     }
-    100% {
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
